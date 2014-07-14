@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <title>Detalle Dia</title>
+    <script type="text/javascript">
+        function redireccion() {
+            document.getElementById("subcontent2").style.display = "block";
+            var nro = getParameterByName("piso");
+            document.location = "ver_dia.asp?piso=" + nro;
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    </script>
+</head>
+<body onload="redireccion();" bgcolor="#CCCCCC" topmargin="1" leftmargin="13" rightmargin="1"
+    bottommargin="1" marginwidth="1" marginheight="1">
+    <div align="center" id="subcontent2" style="position: absolute; display: none; left: 250px;
+        top: 250px">
+        <div style="border: 1px solid black; background-color: lightyellow; width: 200px;
+            height: 80px; padding: 2px">
+            <p align="center" style="font-style: normal; font-size: 10px; font:bold">
+                <br />
+                <br />
+                Buscando reservas
+                <br />
+                espere un momento ...<br />
+                <img src="./img/espera.gif" alt="" /></p>
+        </div>
+    </div>
+</body>
+</html>
