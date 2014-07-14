@@ -19,7 +19,7 @@
             
             dim xNameUser : xNameUser =  Request.ServerVariables("LOGON_USER")
             dim xNameUserTmp : xNameUserTmp = Split(xNameUser,"\")
-            nameUser = xNameUserTmp(1) 
+            nameUser = "Carlos_Tapia" 'xNameUserTmp(1) 
             if nameUser <> "" Then 
                 
                 Set objUser = GetUsuarioByNameUser(nameUser)
