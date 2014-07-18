@@ -19,7 +19,7 @@
             
             dim xNameUser : xNameUser =  Request.ServerVariables("LOGON_USER")
             dim xNameUserTmp : xNameUserTmp = Split(xNameUser,"\")
-            nameUser = "Carlos_Tapia" 'xNameUserTmp(1) 
+            nameUser =  "Ana_arancibia" 'xNameUserTmp(1) 
             if nameUser <> "" Then 
                 
                 Set objUser = GetUsuarioByNameUser(nameUser)
@@ -31,7 +31,7 @@
                     if (Not objUserAutorizado is nothing) then
                         
                         'Tiempo de duracion de la sesion
-                        Session.Timeout = 30
+                        Session.Timeout = 5
                         Session("sesion_usuario_id") = objUserAutorizado.item("IdUsuario")
                         Session("sesion_usuario_nombres") = objUserAutorizado.item("Nombres") + " " + objUserAutorizado.item("Apellidos")
                         Session("sesion_usuario_tipo") = "ADMIN"

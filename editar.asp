@@ -60,6 +60,14 @@
 	                }
 	            });
 
+	           	$('#txtHoraDesde').on('changeTime', function () {
+	                var hora_desde = $(this).val();
+	                var hora_hasta = $('#txtHoraDesde').val();
+	                if (hora_desde > hora_hasta) {
+	                    $(this).val(hora_desde);
+	                }
+	            });
+
 	            $("#frmEditar").validate({
 	                rules: {
 	                    txtFecha: {

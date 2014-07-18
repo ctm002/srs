@@ -1,0 +1,266 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: small/normal Arial,sans-serif;
+}
+
+.tg-timedevents{
+	-webkit-border-horizontal-spacing: 0px;
+	-webkit-border-vertical-spacing: 0px;
+	background-color: #FFF;
+	border-bottom-color: #DDD;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-collapse: separate;
+	border-left-color: #808080;
+	border-right-color: #DDD;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #808080;
+	direction: ltr;
+	display: table;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 1010px;
+	line-height: normal;
+	margin-top: -2px;
+	table-layout: fixed;
+	width: 525px;
+}
+
+th, td{
+	display: table-cell;
+}
+
+.wk-scrolltimedevents{
+	border-bottom-color: #000;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	border-left-color: #000;
+	border-left-style: none;
+	border-left-width: 0px;
+	border-top-color: #000;
+	border-top-style: none;
+	border-top-width: 0px;
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 600px;
+	line-height: normal;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	position: relative;
+	width: 950px;
+}
+
+.tg-mainwrapper{
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 200px;
+	line-height: normal;
+	margin-top: 0px;
+	position: relative;
+	width: 100%;
+}
+
+.tg-timedevents{
+	-webkit-border-horizontal-spacing: 0px;
+	-webkit-border-vertical-spacing: 0px;
+	background-color: #FFF;
+	border-bottom-color: #DDD;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-collapse: separate;
+	border-left-color: #808080;
+	border-right-color: #DDD;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #808080;
+	direction: ltr;
+	display: table;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 731px;
+	line-height: normal;
+	margin-top: -2px;
+	table-layout: fixed;
+	width: 99%;
+}
+.spanningwrapper{
+	border-collapse: separate;
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 0px;
+	line-height: normal;
+	margin-bottom: 0px;
+	margin-left: 1px;
+	margin-right: 0px;
+	margin-top: 1px;
+	position: relative;
+	width: 849px;
+}
+.tg-hourmarkers{
+	border-collapse: separate;
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 731px;
+	line-height: normal;
+	position: absolute;
+	width: 100%;
+	//border: 1px solid red;
+}
+.tg-markercell{
+	border-collapse: separate;
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 42px;
+	line-height: normal;
+	width: 100%;
+}
+.tg-dualmarker{
+	border-bottom-color: #DDD;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-collapse: separate;
+	border-top-color: #DDD;
+	border-top-style: solid;
+	border-top-width: 1px;
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 1px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 21px;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+
+.tg-times-pri
+{
+	background-color: #FFF;
+	border-collapse: separate;
+	border-left-color: #DDD;
+	border-left-style: solid;
+	border-left-width: 1px;
+	color: #555;
+	direction: ltr;
+	display: table-cell;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 731px;
+	line-height: normal;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 1px;
+	text-align: right;
+	vertical-align: top;
+	width: 59px;
+}
+
+.tg-time-pri
+{
+	border-bottom-color: #DDD;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-collapse: separate;
+	color: #555;
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 42px;
+	line-height: normal;
+	padding-right: 2px;
+	text-align: right;
+	width: 57px;
+}
+
+.tg-col
+{
+	border-collapse: separate;
+	border-left-color: #DDD;
+	border-left-style: solid;
+	border-left-width: 1px;
+	direction: ltr;
+	display: table-cell;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 731px;
+	line-height: normal;
+	vertical-align: top;
+	width: 120px;
+}
+.tg-col-eventwrapper{
+	border-collapse: separate;
+	cursor: default;
+	direction: ltr;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 731px;
+	line-height: normal;
+	margin-bottom: -1008px;
+	position: relative;
+	width: 120px;
+	//border: 1px solid red;
+}
+
+.tg-chipspanningwrapper {
+	line-height: 0;
+	margin: 0 10px 0 1px;
+	z-index: 1;
+}
+
+.tg-spanningwrapper {
+	position: relative;
+	margin: 1px 0 0 1px;
+}

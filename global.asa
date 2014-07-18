@@ -1,0 +1,10 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+Sub Application_OnStart
+
+end Sub
+
+Sub Session_OnStart
+	'Tiempo maximo de las variables de sesion'
+	Session.Timeout = 10
+End Sub
+</SCRIPT>
