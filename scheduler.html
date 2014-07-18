@@ -13,20 +13,25 @@
 			$(function(){
 				var contDiv = 0;
 				$('.tg-col-eventwrapper').click(function(e) {
-					var parentOffset = $('.markercell').offset(); 
+					var parentOffset = $(this).offset();
 					var x = e.pageX - parentOffset.left;
-   					var y = e.pageY - parentOffset.top;   					
+   					var y = e.pageY - parentOffset.top;
+					
+					var divHight = 21;
+					var result = parseInt(y/divHight);
+					console.log("fila" + result);
+					
 
 					var div = $("<div/>",{
 						"id": "div" + contDiv, 
 						css: {
-        				"top": y, "left" : 0, "border": "1px", "border-style" : "solid",
+        				"top": result*divHight, "left" : 0, "border": "1px", "border-style" : "solid",
         				"position" : "absolute",
         				"width": "98%",
         				"min-width": "98%",
-        				"height": "41px",
+        				"height": "42px",
         				"margin-botton": 2,
-        				"z-index": 2,
+        				"z-index": 1,
         				"background-color": "#FFFFB8",
         				"border-color" : "#BBBBBB"
     					},
@@ -40,7 +45,7 @@
 					});
 					
 					/*
-					$(".div-reserva").resizable(
+					$("#div" + contDiv).resizable(
 						{
 							containment: ".tg-col-eventwrapper",
 							grid: 15,
@@ -48,8 +53,26 @@
 						});
 					*/
 					contDiv++; 
-				});
+				});				
 			});
+
+			function getCoordenateY(posY)
+			{
+				switch (true) {
+    				case (0 < 21):
+	      				return 0;
+	        			break;
+    				case (x > 21 && x < 42):
+        				return 22;
+        			break;    				
+    				case (x > 42 && x < 63):
+        				return 42;
+						break;
+    				default:
+    					return 0;
+        			break;
+				}
+			}
 		</script>
 	</head>	
 	<body style="cursor: auto;">
@@ -87,7 +110,7 @@
 											<div class="tg-dualmarker"></div>
 										</div>
 										<div class="markercell">
-											<div class="tg-dualmarker"></div>
+											<div class="tg-dualmarker" ></div>
 										</div>
 										<div class="markercell">
 											<div class="tg-dualmarker"></div>

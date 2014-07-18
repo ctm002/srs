@@ -156,7 +156,7 @@ th, td{
 	border-bottom-style: dotted;
 	border-bottom-width: 1px;
 	border-collapse: separate;
-	border-top-color: #DDD;
+	border-top-color: red;//#DDD;
 	border-top-style: solid;
 	border-top-width: 1px;
 	direction: ltr;
