@@ -24,7 +24,7 @@ body {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	height: 1010px;
+	height: 700px;
 	line-height: normal;
 	margin-top: -2px;
 	table-layout: fixed;
@@ -124,7 +124,7 @@ th, td{
 	width: 849px;
 }
 .tg-hourmarkers{
-	border-collapse: separate;
+	//border-collapse: separate;
 	direction: ltr;
 	display: block;
 	font-family: Arial, sans-serif;
@@ -132,13 +132,13 @@ th, td{
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	height: 731px;
+	height: 704	px;
 	line-height: normal;
 	position: absolute;
 	width: 100%;
-	//border: 1px solid red;
 }
 .tg-markercell{
+	margin-top: 1px;
 	border-collapse: separate;
 	direction: ltr;
 	display: block;
@@ -147,7 +147,7 @@ th, td{
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	height: 42px;
+	height: 43px;
 	line-height: normal;
 	width: 100%;
 }
@@ -155,8 +155,8 @@ th, td{
 	border-bottom-color: #DDD;
 	border-bottom-style: dotted;
 	border-bottom-width: 1px;
-	border-collapse: separate;
-	border-top-color: red;//#DDD;
+	//border-collapse: separate;
+	border-top-color: #DDD;
 	border-top-style: solid;
 	border-top-width: 1px;
 	direction: ltr;
@@ -202,7 +202,7 @@ th, td{
 	border-bottom-color: #DDD;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
-	border-collapse: separate;
+	//border-collapse: separate;
 	color: #555;
 	direction: ltr;
 	display: block;
@@ -211,7 +211,7 @@ th, td{
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	height: 42px;
+	height: 43px;
 	line-height: normal;
 	padding-right: 2px;
 	text-align: right;
@@ -231,7 +231,7 @@ th, td{
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	height: 731px;
+	height: 748px;
 	line-height: normal;
 	vertical-align: top;
 	width: 120px;
@@ -246,21 +246,20 @@ th, td{
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	height: 731px;
+	height: 746px;
 	line-height: normal;
-	margin-bottom: -1008px;
+	margin-bottom: -746px;
 	position: relative;
 	width: 120px;
-	//border: 1px solid red;
 }
 
 .tg-chipspanningwrapper {
 	line-height: 0;
 	margin: 0 10px 0 1px;
-	z-index: 1;
+	border-top: 1px solid #DDD;
 }
 
 .tg-spanningwrapper {
 	position: relative;
-	margin: 1px 0 0 1px;
+	margin: 0;
 }

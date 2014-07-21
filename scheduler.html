@@ -12,15 +12,15 @@
 		<script  type="text/javascript" >
 			$(function(){
 				var contDiv = 0;
+				var doClicked = true;
 				$('.tg-col-eventwrapper').click(function(e) {
 					var parentOffset = $(this).offset();
 					var x = e.pageX - parentOffset.left;
    					var y = e.pageY - parentOffset.top;
 					
-					var divHight = 21;
+					var divHight = 22;
 					var result = parseInt(y/divHight);
-					console.log("fila" + result);
-					
+					console.log("fila" + result);					
 
 					var div = $("<div/>",{
 						"id": "div" + contDiv, 
@@ -29,50 +29,38 @@
         				"position" : "absolute",
         				"width": "98%",
         				"min-width": "98%",
-        				"height": "42px",
+        				"height": "43px",
         				"margin-botton": 2,
-        				"z-index": 1,
         				"background-color": "#FFFFB8",
         				"border-color" : "#BBBBBB"
     					},
     					text:"Reservado"
 					}).appendTo($(this))
 					
-					$("#div" + contDiv).click(function(event) {
-						/* Act on the event */
-						event.stopPropagation();
-						alert("wwww.google.cl");						
+					var divNew = $("#div" + contDiv);
+					divNew.on({
+						click: function(e) {
+							e.stopPropagation();
+							if (doClicked) {
+								alert("Aqui tratamos de hacer algo")
+							} else {
+								doClicked = true;
+							}
+						}
 					});
+
+					divNew.resizable({
+						containment: ".tg-col-eventwrapper",
+						grid: 15,
+						distance: 5,
+						stop: function(event, ui){
+							doClicked = false;	
+						}																	
 					
-					/*
-					$("#div" + contDiv).resizable(
-						{
-							containment: ".tg-col-eventwrapper",
-							grid: 15,
-							distance: 5						
-						});
-					*/
+					});
 					contDiv++; 
 				});				
 			});
-
-			function getCoordenateY(posY)
-			{
-				switch (true) {
-    				case (0 < 21):
-	      				return 0;
-	        			break;
-    				case (x > 21 && x < 42):
-        				return 22;
-        			break;    				
-    				case (x > 42 && x < 63):
-        				return 42;
-						break;
-    				default:
-    					return 0;
-        			break;
-				}
-			}
 		</script>
 	</head>	
 	<body style="cursor: auto;">
@@ -92,7 +80,7 @@
 					</div>
 					<br/>
 					<div class="tg-mainwrapper" style="margin-top:0px;">
-						<table id="tgTable" class="tg-timedevents" cellpadding="0" cellspacing="0" style="height:656px" border="0px">
+						<table id="tgTable" class="tg-timedevents" cellpadding="0" cellspacing="0" style="height:700px" border="0px">
 						<tbody>
 						<tr height="1">
 							<td style="width:60px">
@@ -100,89 +88,86 @@
 							<td colspan="7">
 								<div class="tg-spanningwrapper">
 									<div class="tg-hourmarkers">
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker" ></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
 										</div>
-										<div class="markercell">
+										<div class="tg-markercell">
 											<div class="tg-dualmarker"></div>
-										</div>
-										<div class="markercell">
-											<div class="tg-dualmarker"></div>
-										</div>
-									</div>
+										</div>						
+									<div>
 								</div>
-								<div class="tg-spanningwrapper tg-chipspanningwrapper" id="tgspanningwrapper"></div>
+								<div class="tg-spanningwrapper tg-chipspanningwrapper" id="tgspanningwrapper">	</div>
 							</td>
 						</tr>
 						<tr>
 							<td class="tg-times-pri">						
-								<div class="tg-time-pri" style="height:42px">07:00</div>
-								<div class="tg-time-pri" style="height:42px">08:00</div>
-								<div class="tg-time-pri" style="height:42px">09:00</div>
-								<div class="tg-time-pri" style="height:42px">10:00</div>
-								<div class="tg-time-pri" style="height:42px">11:00</div>
-								<div class="tg-time-pri" style="height:42px">12:00</div>
-								<div class="tg-time-pri" style="height:42px">13:00</div>
-								<div class="tg-time-pri" style="height:42px">14:00</div>
-								<div class="tg-time-pri" style="height:42px">15:00</div>
-								<div class="tg-time-pri" style="height:42px">16:00</div>
-								<div class="tg-time-pri" style="height:42px">17:00</div>
-								<div class="tg-time-pri" style="height:42px">18:00</div>
-								<div class="tg-time-pri" style="height:42px">19:00</div>
-								<div class="tg-time-pri" style="height:42px">20:00</div>
-								<div class="tg-time-pri" style="height:42px">21:00</div>
-								<div class="tg-time-pri" style="height:42px">22:00</div>
-								<div class="tg-time-priDom" style="height:42px">23:00</div>						
+								<div class="tg-time-pri">07:00</div>
+								<div class="tg-time-pri">08:00</div>
+								<div class="tg-time-pri">09:00</div>
+								<div class="tg-time-pri">10:00</div>
+								<div class="tg-time-pri">11:00</div>
+								<div class="tg-time-pri">12:00</div>
+								<div class="tg-time-pri">13:00</div>
+								<div class="tg-time-pri">14:00</div>
+								<div class="tg-time-pri">15:00</div>
+								<div class="tg-time-pri">16:00</div>
+								<div class="tg-time-pri">17:00</div>
+								<div class="tg-time-pri">18:00</div>
+								<div class="tg-time-pri">19:00</div>
+								<div class="tg-time-pri">20:00</div>
+								<div class="tg-time-pri">21:00</div>
+								<div class="tg-time-pri">22:00</div>
+													
 							</td>
-							<td class="tg-col"><div id="tgCol0" class="tg-col-eventwrapper" style="height:731px;margin-bottom:-731px;"></div></td>
-							<td class="tg-col"><div id="tgCol1" class="tg-col-eventwrapper" style="height:731px;margin-bottom:-731px;"></div></td>
-							<td class="tg-col"><div id="tgCol2" class="tg-col-eventwrapper" style="height:731px;margin-bottom:-731px;"></div></td>
-							<td class="tg-col"><div id="tgCol3" class="tg-col-eventwrapper" style="height:731px;margin-bottom:-731px;"></div></td>
-							<td class="tg-col"><div id="tgCol4" class="tg-col-eventwrapper" style="height:731px;margin-bottom:-731px;"></div></td>
-							<td class="tg-col"><div id="tgCol5" class="tg-col-eventwrapper" style="height:731px;margin-bottom:-731px;"></div></td>
-							<td class="tg-col"><div id="tgCol6" class="tg-col-eventwrapper" style="height:731px;margin-bottom:-731px;"></div></td>
+							<td class="tg-col"><div id="tgCol0" class="tg-col-eventwrapper" style="height:704px;margin-bottom:-704px;"></div></td>
+							<td class="tg-col"><div id="tgCol1" class="tg-col-eventwrapper" style="height:704px;margin-bottom:-704px;"></div></td>
+							<td class="tg-col"><div id="tgCol2" class="tg-col-eventwrapper" style="height:704px;margin-bottom:-704px;"></div></td>
+							<td class="tg-col"><div id="tgCol3" class="tg-col-eventwrapper" style="height:704px;margin-bottom:-704px;"></div></td>
+							<td class="tg-col"><div id="tgCol4" class="tg-col-eventwrapper" style="height:704px;margin-bottom:-704px;"></div></td>
+							<td class="tg-col"><div id="tgCol5" class="tg-col-eventwrapper" style="height:704px;margin-bottom:-704px;"></div></td>
+							<td class="tg-col"><div id="tgCol6" class="tg-col-eventwrapper" style="height:704px;margin-bottom:-704px;"></div></td>
 						</tr>
 						</tbody>
 						</table>
